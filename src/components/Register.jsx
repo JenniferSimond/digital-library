@@ -4,7 +4,7 @@ import React from "react";
 
 const Register = () => {
    return (
-    <h1>Sign Up 🖊️</h1>
+    <h2>Sign Up 🖊️</h2>
    );
 }
 

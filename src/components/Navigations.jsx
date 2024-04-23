@@ -2,30 +2,41 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+import styled from 'styled-components'
+
+const UL = styled.ul`
+list-style-type: none;
+`;
+
+const LI = styled.li`
+font-size: 15px;
+display: inline;
+margin: 15px;
+`;
 
 
 const Navigation = () =>  {
    
     
         return (
-                <nav>
+                <nav >
 
-                    <ul>
+                    <UL className="nav-list">
                         
-                        <li>
+                        <LI>
                             <Link to='/books'>Home</Link>
-                        </li>
-                        <li>
+                        </LI>
+                        <LI>
                             <Link to='/account'>Account</Link>
-                        </li>
-                        <li>
+                        </LI>
+                        <LI>
                             <Link to='/login'>Login</Link>
-                        </li>
-                        <li>
+                        </LI>
+                        <LI>
                             <Link to='/register'>Register</Link>
-                        </li>
+                        </LI>
                         
-                    </ul>
+                    </UL>
                    
                 </nav>
                );

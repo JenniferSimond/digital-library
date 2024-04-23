@@ -10,15 +10,6 @@ import Account from './components/Account'
 function App() {
   const [token, setToken] = useState(null)
 
-  const fetchAllBooks = async () => {
-    try {
-        const response = await fetch(`${API_URL}/books`)
-        const books = await response.json();
-        console.log(books)
-    } catch (error) {
-        console.error('Error fetching Books', error);
-    }
-}
   return (
     <>
       <h1><img id='logo-image' src={bookLogo}/>Library App</h1>
