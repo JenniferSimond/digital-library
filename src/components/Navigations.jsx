@@ -21,7 +21,7 @@ const Navigation = () =>  {
         return (
                 <nav >
 
-                    <UL className="nav-list">
+                    <UL >
                         
                         <LI>
                             <Link to='/books'>Home</Link>

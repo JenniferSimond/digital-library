@@ -22,7 +22,9 @@ const Input = styled.input`
 `;
 
 
-const Register = ({setToken}) => {
+const Register = () => {
+   const [userMassage, setUserMessage] = useState('')
+   const [signupToken, setSignupToken] = useState('')
    const [formData, setFormData] = useState({
       firstName: '',
       lastName: '',
@@ -34,7 +36,6 @@ const Register = ({setToken}) => {
 
    const handleChange = (event) => {
       const {name, value} = event.target
-    
       setFormData(prevState => ({
          ...prevState,
          [name]: value
@@ -56,7 +57,16 @@ const Register = ({setToken}) => {
          const data = await response.json();
          console.log('data >--->', data)
          console.log('message:', data.message)
-         setToken(data.token)
+         setUserMessage(data.message)
+         
+       
+         if (data.token) {
+            localStorage.setItem('signUpToken', data.token);
+            setSignupToken(data.token)
+         } else {
+            console.error('No registration token received');
+         }
+
       } catch (error) {
          console.error('There was an error signing up!', error)
          
@@ -68,6 +78,8 @@ const Register = ({setToken}) => {
          email: '',
          password: ''
       });
+
+    
      
    };
 
@@ -77,24 +89,24 @@ const Register = ({setToken}) => {
       <SignUpDiv>
      
       <h2>Create an Account 🖊️</h2>
-      <p></p>
+    
       <form onSubmit={handleSubmit}>
          
          <InputDivs>
-            <Input name="firstName" id="first-name" type="text"  onChange={handleChange} value={formData.firstName} placeholder="First Name" />
+            <Input name="firstName" type="text"  onChange={handleChange} value={formData.firstName} placeholder="First Name" />
          </InputDivs>
          <InputDivs>
-            <Input name="lastName" id="last-name" type="text" onChange={handleChange} value={formData.lastName} placeholder="Last Name"/>
+            <Input name="lastName"  type="text" onChange={handleChange} value={formData.lastName} placeholder="Last Name"/>
          </InputDivs>
          <InputDivs>
-            <Input name="email" id="email" type="text" onChange={handleChange} value={formData.email} placeholder="Email"/>
+            <Input name="email"  type="text" onChange={handleChange} value={formData.email} placeholder="Email"/>
          </InputDivs>
          <InputDivs>
-            <Input name="password" id="password" type="password" onChange={handleChange} value={formData.password} placeholder="Password" minLength={8}/>
+            <Input name="password"  type="password" onChange={handleChange} value={formData.password} placeholder="Password" minLength={8}/>
          </InputDivs>
          <button type="submit" >Sign-up</button>
       </form>
-
+      <p>{userMassage}</p>
       </SignUpDiv>
       
 

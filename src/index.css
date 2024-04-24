@@ -13,8 +13,15 @@ h1{
 
 
 #logo-image {
-  width: 30px;
+  width: 50px;
   margin-right: 10px;
 }
+
+.home-div{
+  align-items: center;
+  margin: 0px 50px;
+}
+
+
 
 /* Add your own custom styles here */
