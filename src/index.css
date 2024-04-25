@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "AR One Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -15,74 +15,85 @@ body {
 }
 
 h1{
+  font-family: "Sedan", serif;
   font-size: 25px;
   font-weight:bolder;
   color: #272727;
-  font-family: "Sedan", serif;
-  padding-bottom: 50px ;
+  padding-bottom: 40px ;
 }
-
-
-#logo-image {
-  padding-top: 2px;
-  width: 55px;
-  margin-right: 10px;
-}
-
-.logo-span{
-  color: #BF4E30;
-  font-size: 20px;
-}
-
-.logo-span2{
-  font-size: 15px;
-}
+/* NAVIGATION BAR STYLING */
 .home-div{
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: cadetblue;
   margin: 0px 0px;
-
-}
-
-.nav-div{
-  height: 153px ;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items:flex-end;
-  padding-top: 0%;
-  padding-left: 90px;
-  padding-right: 170px;
-  margin-top: 0%;
-  position: fixed;
-  top: 0;
-  background-color: #E2B170;
-}
-
-.nav-link-text{
-  padding-bottom: 50px;
 }
 
 .inner-home-wrapper{
+  overflow: none;
+  }
+  
+  .inner-home-div{
+    top: 152px;
+    padding-top: 40px;
+    position: relative;
+    padding-bottom: 0px;
+  }
 
+.nav-wrapper {
+  width: 100vw; 
+  height: 160px;
+  background-color: #272727;
  
-overflow: none;
+  position: fixed;
+  top: 0;
+  z-index: 0; 
 }
 
-.inner-home-div{
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-*/
-  /* background-color: bisque; */
-  top: 152px;
-  padding-top: 40px;
-  position: relative;
-  padding-bottom: 0px;
+.nav-div {
+  height: 130px;
+  width: 98vw;
+  border-bottom-right-radius: 5px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 0%;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 0%;
+  position: relative; 
+  background-color: #E2B170; 
+  z-index: 1;
+}
+/* LOGO STYLING */
+#logo-image {
+  padding-top: 2px;
+  width: 35px;
+  margin-right: 10px;
 }
 
-/* Add your own custom styles here */
+.logo-span{
+  color: #BF4E30;
+  font-size: 15px;
+}
+
+.logo-span2{
+  font-style: italic;
+  font-size: 10px;
+}
+
+.nav-catchphrase{
+  font-size: 35px;
+  font-weight: 350;
+  font-style: italic;
+  padding-bottom: 40px;
+}
+
+.nav-link-text{
+  padding-bottom: 20px;
+ 
+}
+
+

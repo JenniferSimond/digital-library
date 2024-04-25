@@ -9,9 +9,18 @@ list-style-type: none;
 `;
 
 const LI = styled.li`
-font-size: 15px;
-display: inline;
-margin: 15px;
+  font-size: 15px;
+  display: inline;
+  margin: 15px;
+//   color: #BF4E30; // Change the color to whatever you like, here it is set to tomato color
+
+  a {
+    font-family: "Work Sans", sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #272727; 
+  }
 `;
 
 

@@ -1,7 +1,7 @@
 /* TODO - add your code to create a functional React component that renders a registration form */
 import React, {useState} from "react";
 import styled from "styled-components";
-import { API_URL } from "../API";
+import { API_URL } from "../../API";
 
 const SignUpDiv = styled.div`
 margin: 50px 90px;
