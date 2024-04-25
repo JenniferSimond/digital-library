@@ -3,7 +3,7 @@
 
 const Account = () => {
     return (
-        <h2>Account 👤 🖊️</h2>
+        <h2>Profile 🧙‍♀️ </h2>
        );
 }
 

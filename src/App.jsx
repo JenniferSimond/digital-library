@@ -13,19 +13,27 @@ function App() {
 
   return (
     
-      <div className='home-div'>
-        <div>
-          <h1><img id='logo-image' src={logo}/>Legilimens Online Library</h1>
-          <Navigation />
+  
+        <div className='.home-div'>
+          <div className='nav-div'>
+            <h1><img id='logo-image' src={logo}/><span className='logo-span'>Legilimens</span> <span className='logo-span2'>- Online -</span> <span className='logo-span'>Library</span></h1>
+            <div className='nav-link-text'>
+              <Navigation />
+            </div>
+          </div>
+             <div className='inner-home-wrapper'>
+               <div className='inner-home-div'>
+                    <Routes>
+                      <Route path='/books' element={<Books />}/>
+                      <Route path='/account' element={<Account />}/>
+                      <Route path='/login' element={<Login setToken={setToken} />}/>
+                      <Route path='/register' element={<Register setToken={setToken}/>}/>
+                    </Routes>
+               </div>
+             </div>
         </div>
-            <Routes>
-              <Route path='/books' element={<Books />}/>
-              <Route path='/account' element={<Account />}/>
-              <Route path='/login' element={<Login setToken={setToken} />}/>
-              <Route path='/register' element={<Register />}/>
-            </Routes>
-      </div>
-
+      
+     
      
     
   )

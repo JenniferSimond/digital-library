@@ -2,10 +2,6 @@
 import React, {useState} from "react";
 import {API_URL} from "../API";
 
-
-
-
-
 const Login = ({setToken}) => {
     const [userMassage, setUserMessage] = useState('')
    
@@ -32,7 +28,7 @@ const Login = ({setToken}) => {
             setUserMessage(userData.message)
             
             if (userData.token) {
-                localStorage.setItem('loginToken', userData.token)
+                // localStorage.setItem('loginToken', userData.token)
                setToken(userData.token)
             } else {
                 console.error('Error logging in')
@@ -57,7 +53,6 @@ const Login = ({setToken}) => {
             [name]: value
         }));
     };
-
 
     return (
         <div>

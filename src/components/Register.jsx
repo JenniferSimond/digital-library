@@ -7,8 +7,6 @@ const SignUpDiv = styled.div`
 margin: 50px 90px;
    display: flex;
    flex-direction: column;
-   
-  
 `;
 
 const InputDivs = styled.div`
@@ -21,10 +19,9 @@ const Input = styled.input`
    max-width: 200px;
 `;
 
-
-const Register = () => {
+const Register = ({setToken}) => {
    const [userMassage, setUserMessage] = useState('')
-   const [signupToken, setSignupToken] = useState('')
+  
    const [formData, setFormData] = useState({
       firstName: '',
       lastName: '',
@@ -33,7 +30,6 @@ const Register = () => {
 
    });
    
-
    const handleChange = (event) => {
       const {name, value} = event.target
       setFormData(prevState => ({
@@ -61,8 +57,8 @@ const Register = () => {
          
        
          if (data.token) {
-            localStorage.setItem('signUpToken', data.token);
-            setSignupToken(data.token)
+         
+            setToken(data.token)
          } else {
             console.error('No registration token received');
          }
@@ -82,8 +78,6 @@ const Register = () => {
     
      
    };
-
- 
 
    return (
       <SignUpDiv>
