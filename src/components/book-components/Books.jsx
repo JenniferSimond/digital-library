@@ -28,7 +28,6 @@ const BookShelf = styled.div`
 
 const Books = () => {
    const [bookList, setBookList] = useState([])
-   const [singleBook, setSingleBook] = useState([])
    const fetchAllBooks = async () => {
 
       try {

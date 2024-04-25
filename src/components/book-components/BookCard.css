@@ -8,10 +8,10 @@
 }
 
 .inside-card {
-    margin: 15px 25px 15px 25px;
+    margin: 20px 25px 0px 25px;
     width: 218px;
     height: 268px;
-  align-items: center;
+    align-items: center;
     background-size: cover;  /* Cover the entire div */
     background-position: center;  /* Center the background image */
     border-radius: 5px; /* Optional: If you want rounded corners */
@@ -19,7 +19,7 @@
 
 .details-button {
       
-       margin:  20px 76px 0px 76px;
+       margin:  21px 76px 20px 76px;
         padding: 0px 29px;          /* Removes padding to ensure exact dimensions */
         font-size: 12px;     /* Adjust font size as needed to fit the text */
         background-color: #E2B170; /* Example background color */

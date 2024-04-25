@@ -9,7 +9,7 @@ list-style-type: none;
 `;
 
 const LI = styled.li`
-  font-size: 15px;
+  font-size: 20px;
   display: inline;
   margin: 15px;
 //   color: #BF4E30; // Change the color to whatever you like, here it is set to tomato color
@@ -43,6 +43,9 @@ const Navigation = () =>  {
                         </LI>
                         <LI>
                             <Link to='/register'>Sign-up</Link>
+                        </LI>
+                        <LI>
+                            <Link to='/singleBook'>View-Book</Link>
                         </LI>
                         
                     </UL>

@@ -3,6 +3,7 @@ import logo from './assets/logo.svg'
 import { Route, Routes } from "react-router-dom"
 import Navigation from './components/nav-components/Navigations'
 import Books from './components/book-components/Books'
+import SingleBook from './components/book-components/SingleBook'
 import Login from './components/user-components/Login'
 import Register from './components/user-components/Register'
 import Account from './components/user-components/Account'
@@ -25,7 +26,9 @@ function App() {
       <div className='inner-home-wrapper'>
         <div className='inner-home-div'>
           <Routes>
+            <Route path='/' element={<Books />} />
             <Route path='/books' element={<Books />} />
+            <Route path='/singleBook' element={<SingleBook />} />
             <Route path='/account' element={<Account />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />
