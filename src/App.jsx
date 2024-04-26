@@ -10,6 +10,7 @@ import Account from './components/user-components/Account'
 
 
 function App() {
+  // TO DO --> FIGURE OUT HOW I'LL USE TOKEN
   const [token, setToken] = useState('');
 
   return (
@@ -26,11 +27,12 @@ function App() {
       <div className='inner-home-wrapper'>
         <div className='inner-home-div'>
           <Routes>
-            {/* NOT SURE WHY WE HAVE TO PUT TWO OF THESE HERE *research later */}
+            {/* RESEARCH LATER--> why we have to use 2 book paths (does it have to do with the way Links is set up) */}
             <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
-            //CREATING dymanic URL --Also Created in Navgation.jsx
-            <Route path='/book/:bookId' element={<SingleBook />} /> 
+            
+            {/* THIS IS MY DYNAMIC LIN --> it's like a shell around nagivate CREATED in BookCard */}
+            <Route path='/book/:bookId' element={<SingleBook />} />  
             <Route path='/account' element={<Account />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />

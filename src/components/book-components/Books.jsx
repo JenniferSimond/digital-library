@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import BookCard from "./BookCard";
 import { fetchAllBooks } from "../../API";
 import styled from "styled-components";
-
+//BOOKS ==> is essentially a bookshelf in the book store that holds all the unique books. 
 const BookSection = styled.div`
    
    // 
@@ -47,8 +47,8 @@ const Books = () => {
        <BookShelf>
           {bookList.map(singleBook => ( 
             /* SEND SINGLE BOOK INFO TO PLAYER CARD
-             singleBook is giving the the playerCard the data needed to set URL path dynamically 
-           which allows singleBook to update based card that was selected page*/
+             singleBook is sending playerCard the data needed to set URL path dynamically 
+           which allows singleBook to URL to update dynamically*/
           <BookCard key={singleBook.id} singleBook={singleBook} /> 
           ))}
           
