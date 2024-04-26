@@ -26,10 +26,11 @@ function App() {
       <div className='inner-home-wrapper'>
         <div className='inner-home-div'>
           <Routes>
-            <Route path='/' element={<Books />} />
+            {/* NOT SURE WHY WE HAVE TO PUT TWO OF THESE HERE *research later */}
+            <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
             //CREATING dymanic URL --Also Created in Navgation.jsx
-            <Route path='/singleBook' element={<SingleBook />} /> 
+            <Route path='/book/:bookId' element={<SingleBook />} /> 
             <Route path='/account' element={<Account />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />

@@ -11,5 +11,19 @@
        console.error('Error fetching Books', error);
    }
  }
+  const fetchSingleBook = async () => {
 
-export {fetchAllBooks}
+    try {
+       const response = await fetch(`${API_URL}/books/bookId`)
+       const book = await response.json();
+       console.log('Books >--->',book.books)
+       return book.books
+   } catch (error) {
+       console.error('Error fetching Books', error);
+   }
+ }
+
+
+ 
+
+export {fetchAllBooks, fetchSingleBook}

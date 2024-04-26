@@ -47,8 +47,8 @@ const Books = () => {
        <BookShelf>
           {bookList.map(singleBook => ( 
             /* SEND SINGLE BOOK INFO TO PLAYER CARD
-             singleBook is giving the the single book data neded to set URL 
-            to return details on page*/
+             singleBook is giving the the playerCard the data needed to set URL path dynamically 
+           which allows singleBook to update based card that was selected page*/
           <BookCard key={singleBook.id} singleBook={singleBook} /> 
           ))}
           
