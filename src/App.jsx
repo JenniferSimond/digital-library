@@ -28,7 +28,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Books />} />
             <Route path='/books' element={<Books />} />
-            <Route path='/singleBook' element={<SingleBook />} />
+            //CREATING dymanic URL --Also Created in Navgation.jsx
+            <Route path='/singleBook' element={<SingleBook />} /> 
             <Route path='/account' element={<Account />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />

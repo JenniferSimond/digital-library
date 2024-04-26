@@ -1,7 +1,7 @@
 /* TODO - add your code to create a functional React component that displays all of the available books in the library's catalog. Fetch the book data from the provided API. Users should be able to click on an individual book to navigate to the SingleBook component and view its details. */
 import React, {useState, useEffect} from "react";
 import BookCard from "./BookCard";
-import { API_URL } from "../../API";
+import { fetchAllBooks } from "../../API";
 import styled from "styled-components";
 
 const BookSection = styled.div`
@@ -28,19 +28,7 @@ const BookShelf = styled.div`
 
 const Books = () => {
    const [bookList, setBookList] = useState([])
-   const fetchAllBooks = async () => {
-
-      try {
-         const response = await fetch(`${API_URL}/books`)
-         const books = await response.json();
-         console.log('Books >--->',books.books)
-         return books.books
-     } catch (error) {
-         console.error('Error fetching Books', error);
-     }
-   
-
-   }
+   const [book, setBook] = useState([])
 
    useEffect(() => {
       const getBooks = async () => {
@@ -58,7 +46,10 @@ const Books = () => {
           
        <BookShelf>
           {bookList.map(singleBook => ( 
-          <BookCard key={singleBook.id} singleBook={singleBook} />
+            /* SEND SINGLE BOOK INFO TO PLAYER CARD
+             singleBook is giving the the single book data neded to set URL 
+            to return details on page*/
+          <BookCard key={singleBook.id} singleBook={singleBook} /> 
           ))}
           
        </BookShelf>
