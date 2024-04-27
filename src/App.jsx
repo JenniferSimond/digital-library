@@ -27,12 +27,9 @@ function App() {
       <div className='inner-home-wrapper'>
         <div className='inner-home-div'>
           <Routes>
-            {/* RESEARCH LATER--> why we have to use 2 book paths (does it have to do with the way Links is set up) */}
             <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
-            
-            {/* THIS IS MY DYNAMIC LIN --> it's like a shell around nagivate CREATED in BookCard */}
-            <Route path='/book/:bookId' element={<SingleBook />} />  
+            <Route path='/books/:bookId' element={<SingleBook />} />  
             <Route path='/account' element={<Account />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />

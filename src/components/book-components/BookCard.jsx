@@ -11,8 +11,8 @@ const BookCard = ({singleBook}) => {
 
     const handleButtonClick = () => {
       
-        navigate(`/books/${singleBook.id}`) /*DYNAMIC LINK --> create dynamic link that will be SET IN PATH (/books/:bookId) --> this will equate to singleBook */
-        console.log('Button Vlick', singleBook)  
+        navigate(`/books/${singleBook.id}`) 
+        console.log('Button Click', singleBook)  
     }
     return(
         <div className="book-card">

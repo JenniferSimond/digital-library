@@ -3,11 +3,9 @@ import React, {useState, useEffect} from "react";
 import BookCard from "./BookCard";
 import { fetchAllBooks } from "../../API";
 import styled from "styled-components";
+
 //BOOKS ==> is essentially a bookshelf in the book store that holds all the unique books. 
 const BookSection = styled.div`
-   
-   // 
-
    // width: 100%; 
 `;
 
@@ -28,7 +26,7 @@ const BookShelf = styled.div`
 
 const Books = () => {
    const [bookList, setBookList] = useState([])
-   const [book, setBook] = useState([])
+ 
 
    useEffect(() => {
       const getBooks = async () => {

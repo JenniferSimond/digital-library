@@ -23,7 +23,6 @@ const LI = styled.li`
   }
 `;
 
-
 const Navigation = () =>  {
    
     
@@ -44,9 +43,9 @@ const Navigation = () =>  {
                         <LI>
                             <Link to='/register'>Sign-up</Link>
                         </LI>
-                        <LI>
-                            <Link to='/singleBook'>View-Book</Link>
-                        </LI>
+                        {/* <LI>
+                            <Link to='/books/:bookId'>View-Book</Link>
+                        </LI> */}
                         
                     </UL>
                    

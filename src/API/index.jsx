@@ -11,13 +11,13 @@
        console.error('Error fetching Books', error);
    }
  }
-  const fetchSingleBook = async () => {
+  const fetchSingleBook = async (bookIdParam) => {
 
     try {
-       const response = await fetch(`${API_URL}/books/bookId`)
+       const response = await fetch(`${API_URL}/books/${bookIdParam}`)
        const book = await response.json();
-       console.log('Books >--->',book.books)
-       return book.books
+       console.log('Books >--->',book)
+       return book
    } catch (error) {
        console.error('Error fetching Books', error);
    }
