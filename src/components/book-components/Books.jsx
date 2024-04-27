@@ -27,7 +27,6 @@ const BookShelf = styled.div`
 const Books = () => {
    const [bookList, setBookList] = useState([])
  
-
    useEffect(() => {
       const getBooks = async () => {
          
@@ -44,9 +43,9 @@ const Books = () => {
           
        <BookShelf>
           {bookList.map(singleBook => ( 
-            /* SEND SINGLE BOOK INFO TO PLAYER CARD
-             singleBook is sending playerCard the data needed to set URL path dynamically 
-           which allows singleBook to URL to update dynamically*/
+            /* SEND SINGLE BOOK INFO TO PLAYER CARD 
+            * singleBook is sending playerCard the data needed to set URL path dynamically 
+            * which allows singleBook URL to update dynamically*/
           <BookCard key={singleBook.id} singleBook={singleBook} /> 
           ))}
           

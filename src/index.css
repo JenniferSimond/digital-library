@@ -60,8 +60,8 @@ h1{
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 0%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  /* padding-right: 20px; */
   margin-top: 0%;
   position: relative; 
   background-color: #E2B170; 
@@ -85,9 +85,11 @@ h1{
 }
 
 .nav-catchphrase{
-  font-size: 35px;
-  font-weight: 300;
+  font-size: 25x;
+  font-weight: 500;
   font-style: italic;
+  text-align: center;
+  padding-left: 10px;
   padding-bottom: 40px;
 }
 

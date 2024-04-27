@@ -12,7 +12,6 @@ const LI = styled.li`
   font-size: 20px;
   display: inline;
   margin: 15px;
-//   color: #BF4E30; // Change the color to whatever you like, here it is set to tomato color
 
   a {
     font-family: "Work Sans", sans-serif;
@@ -43,10 +42,6 @@ const Navigation = () =>  {
                         <LI>
                             <Link to='/register'>Sign-up</Link>
                         </LI>
-                        {/* <LI>
-                            <Link to='/books/:bookId'>View-Book</Link>
-                        </LI> */}
-                        
                     </UL>
                    
                 </nav>
