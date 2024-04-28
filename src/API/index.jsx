@@ -16,7 +16,7 @@
     try {
        const response = await fetch(`${API_URL}/books/${bookId}`)
        const book = await response.json();
-       console.log('Book from index>--->',book.id)
+       console.log('Book from index>--->',book.book)
        console.log('BookId Param >--->',bookId)
        return book.book
    } catch (error) {
