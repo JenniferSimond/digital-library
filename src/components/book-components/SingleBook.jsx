@@ -78,7 +78,7 @@ line-height: 26px;
 
 const SingleBook = ({token}) => {
     const [loadingState, setLoading] = useState(false);
-    const [book, setBook] = useState(null);
+    const [book, setBook] = useState('');
     const { bookId } = useParams(); // Get the bookId from the URL
 
     console.log('Single Token-->',token)
@@ -94,7 +94,7 @@ const SingleBook = ({token}) => {
                 setLoading(false); // if fetch successful reset loading state --> loading state needs to be false to get data or else you get loading state
             } catch (error) {
                 // RESET state if error
-                setBook(null); 
+                setBook(''); 
                 setLoading(false); 
                 console.error('Failed to fetch book:', error);
             }
