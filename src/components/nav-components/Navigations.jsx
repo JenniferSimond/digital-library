@@ -34,7 +34,7 @@ const Navigation = () =>  {
                             <Link to='/books'>Home</Link>
                         </LI>
                         <LI>
-                            <Link to='/account'>Account</Link>
+                            <Link to='/mybooks'>My Books</Link>
                         </LI>
                         <LI>
                             <Link to='/login'>Login</Link>

@@ -6,7 +6,7 @@ import Books from './components/book-components/Books'
 import SingleBook from './components/book-components/SingleBook'
 import Login from './components/user-components/Login'
 import Register from './components/user-components/Register'
-import Account from './components/user-components/Account'
+import MyBooks from './components/user-components/MyBooks'
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
             <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
             <Route path='/books/:bookId' element={<SingleBook token={token}/>} />  
-            <Route path='/account' element={<Account />} />
+            <Route path='/mybooks' element={<MyBooks token={token} />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />
           </Routes>
