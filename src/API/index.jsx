@@ -24,7 +24,31 @@
    }
  }
 
+ const bookCheckOutReservation = async (bookId, token) => {
+  
+  try {
+    const response = await fetch(`${API_URL}/books/${bookId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        available: false,
+      })
+    });
+   
+    const upDatedReservation = await response.json();
+    console.log(upDatedReservation);
+    
+  } catch (error) {
+    
+  }
+
+ }
+
+
 
  
 
-export {fetchAllBooks, fetchSingleBook}
+export {fetchAllBooks, fetchSingleBook, bookCheckOutReservation }

@@ -10,7 +10,8 @@ import Account from './components/user-components/Account'
 
 
 function App() {
-  // TO DO --> FIGURE OUT HOW I'LL USE TOKEN
+  // TOKEN --> Passed down to children that need to user authentication --> prop drilling
+  // Remember --> PROPS are like Parameters 
   const [token, setToken] = useState('');
 
   return (
@@ -29,7 +30,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
-            <Route path='/books/:bookId' element={<SingleBook />} />  
+            <Route path='/books/:bookId' element={<SingleBook token={token}/>} />  
             <Route path='/account' element={<Account />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />

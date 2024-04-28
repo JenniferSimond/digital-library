@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchSingleBook } from "../../API";
+import { fetchSingleBook, bookCheckOutReservation } from "../../API";
+
 
 import styled from "styled-components";
 
 const SingleView = styled.div`
+margin-top: 25px
 width: 100%;
 height: 100%;
 display: flex;
@@ -12,23 +14,47 @@ justify-content: center;
 `;
 
 const InsideView = styled.div`
+// background-color: #272727;
+margin-top: 10px;
 height: 100%;
-max-width: 800px;
+max-width: 500px;
 display: flex;
 flex-direction: column;
-gap: 55px;
+gap: 15px;
 align-items: center;
-
+ h2{
+    padding-bottom: 10px;
+ }
 `;
 
 const BookCover = styled.img`
-    max-width: 250px;
-    max-height: auto;
+ margin: 20px 0px 30px 0px;
+    max-width: auto;
+    max-height: 350px;
     border-radius: 5px;
 `;
 
+const DetailsDiv = styled.div`
+
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 500px;
+// background-color: #E2B170; 
+
+
+    p{
+      
+       
+        padding: 2px 0px 10px 0px;
+    }
+`;
+
 const DetailsSpan = styled.span`
-    font-weight: 550;
+    font-weight: 750;
+    display: block;
+    padding-bottom: 2px;
+    
 `;
 
 const Button = styled.button`
@@ -43,10 +69,12 @@ text-align: center;
 line-height: 26px;  
 `;
 
-const SingleBook = () => {
+const SingleBook = ({token}) => {
     const [loadingState, setLoading] = useState(false);
     const [book, setBook] = useState(null);
     const { bookId } = useParams(); // Get the bookId from the URL
+
+    console.log('Token-->',token)
 
     useEffect(() => {
         const getBookById = async () => {
@@ -80,6 +108,21 @@ const SingleBook = () => {
         return <div>No book found</div>; 
     }
 
+    const handleCheckOut = async () => {
+        if (!token) {
+            alert('Please login or register to check out!');
+            return;
+        }
+
+       try {
+        const checkOutStat = await bookCheckOutReservation(bookId, token);
+        alert('check out successful, book now awailable in profile');
+       } catch (error) {
+        console.error('Checkout failed:', error);
+        alert('Checkout failed. Please try again.');
+       }
+    }
+
     return (
         <SingleView className="single-view">
             <InsideView>
@@ -87,12 +130,12 @@ const SingleBook = () => {
                 <div>
                 <BookCover className="book-cover" src={book.coverimage} alt={`${book.ttile} cover`}/>
                 </div>
-                <div>
+                <DetailsDiv>
                     <p><DetailsSpan>Author: </DetailsSpan> {book.author}</p>
                     <p><DetailsSpan>Summary: </DetailsSpan>{book.description}</p>
-                    <p><DetailsSpan>Book Status: </DetailsSpan> {book.available ? 'available' : 'reserved'}</p>
-                </div>
-                <div><Button>Checkout</Button></div>
+                   
+                </DetailsDiv>
+                <div><Button onClick={handleCheckOut}>Check Out</Button></div>
             </InsideView>
         </SingleView>
     );
