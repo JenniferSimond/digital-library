@@ -41,13 +41,20 @@ flex-direction: column;
 gap: 10px;
 max-width: 500px;
 // background-color: #E2B170; 
-
-
     p{
       
-       
         padding: 2px 0px 10px 0px;
     }
+
+    span{
+        color: #BF4E30;
+    }
+.book-summary {
+    overflow: auto;
+    max-height: 90px
+    overflow: auto;
+}
+      
 `;
 
 const DetailsSpan = styled.span`
@@ -74,7 +81,7 @@ const SingleBook = ({token}) => {
     const [book, setBook] = useState(null);
     const { bookId } = useParams(); // Get the bookId from the URL
 
-    console.log('Token-->',token)
+    console.log('Single Token-->',token)
 
     useEffect(() => {
         const getBookById = async () => {
@@ -116,7 +123,7 @@ const SingleBook = ({token}) => {
 
        try {
         const checkOutStat = await bookCheckOutReservation(bookId, token);
-        alert('check out successful, book now awailable in profile');
+        alert(`check out successful,${book.title} is now awailable in My Books`);
        } catch (error) {
         console.error('Checkout failed:', error);
         alert('Checkout failed. Please try again.');
@@ -130,12 +137,11 @@ const SingleBook = ({token}) => {
                 <div>
                 <BookCover className="book-cover" src={book.coverimage} alt={`${book.ttile} cover`}/>
                 </div>
+                <div><Button onClick={handleCheckOut}>Check Out</Button></div>
                 <DetailsDiv>
                     <p><DetailsSpan>Author: </DetailsSpan> {book.author}</p>
-                    <p><DetailsSpan>Summary: </DetailsSpan>{book.description}</p>
-                   
+                    <p className="book-summary"><DetailsSpan>Summary: </DetailsSpan>{book.description}</p>
                 </DetailsDiv>
-                <div><Button onClick={handleCheckOut}>Check Out</Button></div>
             </InsideView>
         </SingleView>
     );

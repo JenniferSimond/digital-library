@@ -9,7 +9,7 @@ const Login = ({setToken}) => {
         email: '',
         password: ''
     });
-
+//Abstract API stuff to API folder 
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log('Login form >--->')
@@ -53,7 +53,7 @@ const Login = ({setToken}) => {
             [name]: value
         }));
     };
-
+//IMPORTANT! ---> finish styling
     return (
         <div>
             <h2>Login 🔐</h2>

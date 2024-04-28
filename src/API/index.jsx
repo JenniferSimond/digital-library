@@ -48,7 +48,27 @@
  }
 
 
+const getUserDetails = async (token) => {
+  try {
+    
+    const response = await fetch(`${API_URL}/users/me`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+    });
+
+    const result = await response.json();
+    console.log('My Books -->', result)
+    return result
+
+  } catch (error) {
+    console.error('Failed to fetch reservations:', error);
+  }
+}
+
+
 
  
 
-export {fetchAllBooks, fetchSingleBook, bookCheckOutReservation }
+export {fetchAllBooks, fetchSingleBook, bookCheckOutReservation, getUserDetails}

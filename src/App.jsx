@@ -6,7 +6,7 @@ import Books from './components/book-components/Books'
 import SingleBook from './components/book-components/SingleBook'
 import Login from './components/user-components/Login'
 import Register from './components/user-components/Register'
-import MyBooks from './components/user-components/MyBooks'
+import MyBooks from './components/reservation-components/MyBooks'
 
 
 function App() {

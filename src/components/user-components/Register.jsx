@@ -29,6 +29,8 @@ const Register = ({setToken}) => {
       password: ''
 
    });
+
+   //Abstract API stuff to API folder 
    
    const handleChange = (event) => {
       const {name, value} = event.target
@@ -76,7 +78,7 @@ const Register = ({setToken}) => {
       });
      
    };
-
+//IMPORTANT! ---> finish styling
    return (
       <SignUpDiv>
      
