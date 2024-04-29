@@ -29,6 +29,7 @@ const Login = ({setToken}) => {
             
             if (userData.token) {
                 // localStorage.setItem('loginToken', userData.token)
+                //TRY USING THIS INSTEAD OF STATE
                setToken(userData.token)
             } else {
                 console.error('Error logging in')

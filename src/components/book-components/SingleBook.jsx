@@ -80,6 +80,7 @@ const SingleBook = ({token}) => {
     const [loadingState, setLoading] = useState(false);
     const [book, setBook] = useState('');
     const { bookId } = useParams(); // Get the bookId from the URL
+    // const [reservation, setReservation] = useState('')
 
     console.log('Single Token-->',token)
 
@@ -105,7 +106,7 @@ const SingleBook = ({token}) => {
         }
     }, [bookId]);
     //can also use ternary operator...will refactor if this works
-    // Display loadingState is true display loadidng state
+    // Display loadingState is true display loadidng state div
     if (loadingState) {
         return <div>Book Loading...</div>; 
     }
@@ -122,8 +123,11 @@ const SingleBook = ({token}) => {
         }
 
        try {
+        //Don't need to store or pass, the book id is used during book reservation cancellation, just needed this to get the reservation in database
         const checkOutStat = await bookCheckOutReservation(bookId, token);
         alert(`check out successful,${book.title} is now awailable in My Books`);
+        // setReservation(checkOutStat);
+        console.log('CheckoutStat',checkOutStat)
        } catch (error) {
         console.error('Checkout failed:', error);
         alert('Checkout failed. Please try again.');

@@ -26,7 +26,7 @@ const MyBooks = ({ token }) => {
     const [loading, setLoading] = useState(false);
     const [userDetails, setUserDetails] = useState(null);
     const [error, setError] = useState(null);
-
+    const [pageRefresh, setPageRefresh] = useState(false)
     useEffect(() => {
         const fetchData = async () => {
             if (!token) {
@@ -48,10 +48,15 @@ const MyBooks = ({ token }) => {
         };
 
         fetchData();
-    }, [token]); 
+    }, [token, pageRefresh]); 
+
+    //TOGGLE REGRESH TO RE_LOAD THE PAGE WHEN BOOK DELETED --> PASS to MyBookCard
+   const refreshHandler = () => {
+        setPageRefresh(!pageRefresh)  //toggle opposite value
+    }
 
     if (!token) {
-        return <p>Please log in to view your books.</p>;
+        return <p>Please log in to view your account.</p>;
     }
 
     if (loading) {
@@ -72,13 +77,13 @@ const MyBooks = ({ token }) => {
                    
                         <BookShelf>
                             {userDetails.books.map(book => (
-                                <MyBookCard key={book.id} book={book} />
+                                <MyBookCard key={book.id} book={book} token={token} refresh={refreshHandler} />
                             ))}
                         </BookShelf>
                    
                 </BookSection>
             ) : (
-                <p>No user details found.</p>
+                <p>No user account found.</p>
             )}
         </div>
     );

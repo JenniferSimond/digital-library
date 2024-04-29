@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 //BookCard --> is essentially the book that go on my digital book shelf in my book shop
-/* I CODED THIS BASED ON THE THOUGHT THAT EACH CARD IS A Unique ECOSYSTEM---> Button press will go to a uniquely rendered page that Navigates based on button click that page will rendered based on card information */
+/* I CODED THIS BASED ON THE THOUGHT THAT EACH CARD IS A Unique ECOSYSTEM---> 
+Button press will go to a uniquely rendered page that Navigates based on button click that page will rendered based on card information */
 
 const BookCardDiv = styled.div`
     width: 268px;
@@ -50,7 +51,7 @@ const BookCard = ({singleBook}) => {
     }
     return(
         <BookCardDiv className="book-card">
-            {/* //Dynamic link to update book cover based on book ID. */}
+            {/* //Dynamic link to update book cover based on book  */}
             <InsideCard className="inside-card" style={{ backgroundImage: `url(${singleBook.coverimage})` }}> 
             </InsideCard>
             <div>

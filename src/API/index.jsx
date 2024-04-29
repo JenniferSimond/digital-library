@@ -40,9 +40,29 @@
    
     const upDatedReservation = await response.json();
     console.log(upDatedReservation);
+    return upDatedReservation;
     
   } catch (error) {
+    console.error(error)
+  }
+
+ }
+ const deleteBookReservation = async (bookId, token) => {
+  
+  try {
+    const response = await fetch(`${API_URL}/reservations/${bookId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    });
+   
+    const deletedReservation = await response.json();
+    console.log(deletedReservation);
     
+  } catch (error) {
+    console.error(error)
   }
 
  }
@@ -71,4 +91,4 @@ const getUserDetails = async (token) => {
 
  
 
-export {fetchAllBooks, fetchSingleBook, bookCheckOutReservation, getUserDetails}
+export {fetchAllBooks, fetchSingleBook, bookCheckOutReservation, getUserDetails, deleteBookReservation}

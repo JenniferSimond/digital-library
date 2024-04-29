@@ -10,7 +10,7 @@ import MyBooks from './components/reservation-components/MyBooks'
 
 
 function App() {
-  // TOKEN --> Passed down to children that need to user authentication --> prop drilling
+  // TOKEN --> Passed down to children that need user authentication --> prop drilling
   // Remember --> PROPS are like Parameters 
   const [token, setToken] = useState('');
 
@@ -31,7 +31,7 @@ function App() {
             <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
             <Route path='/books/:bookId' element={<SingleBook token={token}/>} />  
-            <Route path='/mybooks' element={<MyBooks token={token} />} />
+            <Route path='/account' element={<MyBooks token={token} />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />
           </Routes>

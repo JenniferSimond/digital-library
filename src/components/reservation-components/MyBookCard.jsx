@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Navigate } from "react-router-dom";
+import { deleteBookReservation } from "../../API";
 
 const BookCardDiv = styled.div`
     width: 268px;
@@ -35,13 +36,24 @@ const DetailsButton = styled.button`
 `;
 
 
-const MyBookCard = ({book}) => {
-   
+const MyBookCard = ({book, token, refresh}) => {
 //SUPER IMPORTANT >----> add book deletion on button click
-    const handleBookReturn = () => {
+
+    const handleBookReturn = async () => {
+      console.log(book.id)
       
+            try {
+                const result = await deleteBookReservation(book.id, token);
+                console.log("Book returned:", result);
+                refresh();
+                // Additional UI update logic here if necessary
+            } catch (error) {
+                console.error("Failed to return the book:", error);
+            }
+        };
          
-    }
+   
+
     return(
         <BookCardDiv >
             
@@ -52,6 +64,6 @@ const MyBookCard = ({book}) => {
             </div>
         </BookCardDiv>
     );
-}
 
+}
 export default MyBookCard
