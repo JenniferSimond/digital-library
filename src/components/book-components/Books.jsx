@@ -43,7 +43,6 @@ const Books = () => {
       const getBooks = async () => {
          
          const libraryBooks = await fetchAllBooks()
-         console.log(libraryBooks)
          setBookList(libraryBooks)
          setFilteredBookList(libraryBooks)
       }

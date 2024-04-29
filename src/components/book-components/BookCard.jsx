@@ -47,7 +47,6 @@ const BookCard = ({singleBook}) => {
     const handleButtonClick = () => {
       
         navigate(`/books/${singleBook.id}`) 
-        console.log('Button Click', singleBook)  
     }
     return(
         <BookCardDiv className="book-card">

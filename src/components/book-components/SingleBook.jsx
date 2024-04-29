@@ -80,9 +80,7 @@ const SingleBook = ({token}) => {
     const [loadingState, setLoading] = useState(false);
     const [book, setBook] = useState('');
     const { bookId } = useParams(); // Get the bookId from the URL
-    // const [reservation, setReservation] = useState('')
 
-    console.log('Single Token-->',token)
 
     useEffect(() => {
         const getBookById = async () => {
@@ -90,8 +88,6 @@ const SingleBook = ({token}) => {
             try {
                 const fetchedBook = await fetchSingleBook(bookId);
                 setBook(fetchedBook); // Set the fetched book in state
-                console.log('bookId -->',bookId)
-                console.log('Fetched Book -->',fetchedBook)
                 setLoading(false); // if fetch successful reset loading state --> loading state needs to be false to get data or else you get loading state
             } catch (error) {
                 // RESET state if error
@@ -126,8 +122,6 @@ const SingleBook = ({token}) => {
         //Don't need to store or pass, the book id is used during book reservation cancellation, just needed this to get the reservation in database
         const checkOutStat = await bookCheckOutReservation(bookId, token);
         alert(`check out successful,${book.title} is now awailable in My Books`);
-        // setReservation(checkOutStat);
-        console.log('CheckoutStat',checkOutStat)
        } catch (error) {
         console.error('Checkout failed:', error);
         alert('Checkout failed. Please try again.');

@@ -40,11 +40,9 @@ const MyBookCard = ({book, token, refresh}) => {
 //SUPER IMPORTANT >----> add book deletion on button click
 
     const handleBookReturn = async () => {
-      console.log(book.id)
       
             try {
                 const result = await deleteBookReservation(book.id, token);
-                console.log("Book returned:", result);
                 refresh();
                 // Additional UI update logic here if necessary
             } catch (error) {

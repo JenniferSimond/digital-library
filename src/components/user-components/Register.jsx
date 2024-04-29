@@ -41,7 +41,6 @@ const Register = ({setToken}) => {
    };
 
    const handleSubmit = async (event) => {
-      console.log('Sign up form!')
       event.preventDefault();
 
       try {
@@ -53,8 +52,6 @@ const Register = ({setToken}) => {
             body: JSON.stringify(formData)
          });
          const data = await response.json();
-         console.log('data >--->', data)
-         console.log('message:', data.message)
          setUserMessage(data.message)
          
        

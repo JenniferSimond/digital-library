@@ -5,7 +5,6 @@
     try {
        const response = await fetch(`${API_URL}/books`)
        const books = await response.json();
-       console.log('Books >--->',books.books)
        return books.books
    } catch (error) {
        console.error('Error fetching Books', error);
@@ -16,8 +15,6 @@
     try {
        const response = await fetch(`${API_URL}/books/${bookId}`)
        const book = await response.json();
-       console.log('Book from index>--->',book.book)
-       console.log('BookId Param >--->',bookId)
        return book.book
    } catch (error) {
        console.error('Error fetching Books', error);
@@ -39,7 +36,6 @@
     });
    
     const upDatedReservation = await response.json();
-    console.log(upDatedReservation);
     return upDatedReservation;
     
   } catch (error) {
@@ -59,7 +55,6 @@
     });
    
     const deletedReservation = await response.json();
-    console.log(deletedReservation);
     
   } catch (error) {
     console.error(error)
@@ -79,7 +74,6 @@ const getUserDetails = async (token) => {
     });
 
     const result = await response.json();
-    console.log('My Books -->', result)
     return result
 
   } catch (error) {

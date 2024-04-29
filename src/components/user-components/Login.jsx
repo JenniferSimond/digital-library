@@ -12,7 +12,6 @@ const Login = ({setToken}) => {
 //Abstract API stuff to API folder 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Login form >--->')
 
         try {
             const response = await fetch(`${API_URL}/users/login`, {
@@ -24,7 +23,6 @@ const Login = ({setToken}) => {
             });
 
             const userData = await response.json();
-            console.log('UserData >--->', userData)
             setUserMessage(userData.message)
             
             if (userData.token) {
@@ -47,8 +45,6 @@ const Login = ({setToken}) => {
 
     const handleChange = (event) => {
         const {name, value} = event.target
-        console.log('Event >--->', event.target.value)
-        console.log(loginFormData)
         setLoginFormData(prevState => ({
             ...prevState, 
             [name]: value
