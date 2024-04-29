@@ -19,7 +19,7 @@ h1{
   font-size: 25px;
   font-weight:bolder;
   color: #272727;
-  padding-bottom: 40px ;
+  padding-bottom: 20px ;
 }
 /* NAVIGATION BAR STYLING */
 .home-div{
@@ -90,7 +90,7 @@ h1{
   font-style: italic;
   text-align: center;
   padding-left: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .nav-link-text{

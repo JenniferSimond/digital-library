@@ -18,14 +18,26 @@ const BookShelf = styled.div`
    justify-content: flex-start;  // Aligns items to the left
    align-content: flex-start;
    width: 80%;  // Adjustable as per design needs
-   max-height: 770px;
+   max-height: 750px;
    overflow-y: auto;
    margin: 0 auto;  // Centers the BookShelf in the BookSection
 `;
 
+const SearchDiv = styled.div`
+   margin: 0px 0px 25px 170px;
+`;
+
+ const SearchBox = styled.input`
+ padding: 10px;
+//  margin: 10px 0;
+ width: 35%;
+ border: 3px solid #E2B170;
+ border-radius: 33px;
+ `;
 
 const Books = () => {
-   const [bookList, setBookList] = useState([])
+   const [bookList, setBookList] = useState([]); //original Book list state
+   const [filteredBookList, setFilteredBookList] = useState([]); //filtered list state
  
    useEffect(() => {
       const getBooks = async () => {
@@ -33,16 +45,26 @@ const Books = () => {
          const libraryBooks = await fetchAllBooks()
          console.log(libraryBooks)
          setBookList(libraryBooks)
+         setFilteredBookList(libraryBooks)
       }
       getBooks();
    }, [])
    
+   const handleSearch = (event) => {
+      const searchTerm = event.target.value.toLowerCase();
+      const updatedBookList = bookList.filter(book => book.title.toLowerCase().includes(searchTerm));
+      setFilteredBookList(updatedBookList);
+   }
+
    return(
     <>
     <BookSection >
-          
+
+      <SearchDiv>
+          <SearchBox onChange={handleSearch} placeholder="Search by Book Title"/>
+      </SearchDiv>
        <BookShelf>
-          {bookList.map(singleBook => ( 
+          {filteredBookList.map(singleBook => ( 
             /* SEND SINGLE BOOK INFO TO PLAYER CARD 
             * singleBook is sending playerCard the data needed to set URL path dynamically 
             * which allows singleBook URL to update dynamically*/

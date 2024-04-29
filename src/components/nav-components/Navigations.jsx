@@ -17,7 +17,7 @@ const LI = styled.li`
     font-family: "Work Sans", sans-serif;
     text-decoration: none;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     color: #272727; 
   }
 `;
