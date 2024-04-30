@@ -9,8 +9,8 @@ Details on the API can be found 🔗 [here](https://fsa-book-buddy-b6e748d1380d.
 ## Features
 
 - User Authentication: Secure login and registration functionality.
-- Browse Books\*\*: Users can browse a list of available books.
-- Book Details\*\*: Click on any book to see detailed information.
+- Browse Books: Users can browse a list of available books.
+- Book Details: Click on any book to see detailed information.
 - Manage Reservations: Users can check out books.
 - User Profile: Manage: View their username (email) and return books.
 
@@ -26,10 +26,10 @@ Details on the API can be found 🔗 [here](https://fsa-book-buddy-b6e748d1380d.
 To run this project locally, follow these steps:
 
 1. Clone this repository to your local machine using the following command:
-   `git clone git@github.com:JenniferSimond/personal-portfolio.git`
+   `git clone https://github.com/JenniferSimond/digital-library`
 
 2. Navigate to the project directory:
-   `cd personal-portfolio`
+   `cd digital-library`
 
 3. Open any of the HTML files (index.html, about.html, portfolio.html) in your preferred web browser.
 
