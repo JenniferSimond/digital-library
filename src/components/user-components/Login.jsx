@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 import {API_URL} from "../../API";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const LoginDivWrapper = styled.div`
 width: 95%;
@@ -46,8 +47,8 @@ flex-direction: column;
 `;
 
 const Login = ({setToken}) => {
+    const navigate = useNavigate();
     const [userMassage, setUserMessage] = useState('')
-   
     const [loginFormData, setLoginFormData] = useState({
         email: '',
         password: ''
@@ -72,6 +73,7 @@ const Login = ({setToken}) => {
                 // localStorage.setItem('loginToken', userData.token)
                 //TRY USING THIS INSTEAD OF STATE
                setToken(userData.token)
+               navigate('/account') //auto navigate to profile
             } else {
                 console.error('Error logging in')
             }
