@@ -3,20 +3,44 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { API_URL } from "../../API";
 
+const SignUpDivWrapper = styled.div`
+width: 95%;
+display: flex;
+justify-content: center;
+align-items: center;
+`;
+
 const SignUpDiv = styled.div`
 margin: 50px 90px;
    display: flex;
    flex-direction: column;
+
+   button{
+      margin:  10px 0px 0px 0px;
+    padding: 0px 20px;          
+    font-size: 12px;     
+    background-color: #E2B170; 
+    color: rgb(0, 0, 0);       
+    border: none;        
+    border-radius: 30px; 
+    cursor: pointer;     
+    text-align: center; 
+    line-height: 26px;   
+    z-index: 0;
+   }
 `;
 
 const InputDivs = styled.div`
    display: flex;
    flex-direction: column;
-  margin: 15px 0px;
+  margin: 10px 0px 10px 0px;
 `;
 
 const Input = styled.input`
    max-width: 200px;
+   padding: 5px;
+   border: 1px solid #E2B170;
+   border-radius: 5px;
 `;
 
 const Register = ({setToken}) => {
@@ -77,28 +101,28 @@ const Register = ({setToken}) => {
    };
 //IMPORTANT! ---> finish styling
    return (
-      <SignUpDiv>
-     
-      <h2>Create an Account 🖊️</h2>
-    
-      <form onSubmit={handleSubmit}>
+      <SignUpDivWrapper>
+         <SignUpDiv>
+            <h2>Create an Account 🖊️</h2>
+            <form onSubmit={handleSubmit}>
          
-         <InputDivs>
-            <Input name="firstName" type="text"  onChange={handleChange} value={formData.firstName} placeholder="First Name" />
-         </InputDivs>
-         <InputDivs>
-            <Input name="lastName"  type="text" onChange={handleChange} value={formData.lastName} placeholder="Last Name"/>
-         </InputDivs>
-         <InputDivs>
-            <Input name="email"  type="text" onChange={handleChange} value={formData.email} placeholder="Email"/>
-         </InputDivs>
-         <InputDivs>
-            <Input name="password"  type="password" onChange={handleChange} value={formData.password} placeholder="Password" minLength={8}/>
-         </InputDivs>
-         <button type="submit" >Sign-up</button>
-      </form>
-      <p>{userMassage}</p>
-      </SignUpDiv>
+               <InputDivs>
+                  <Input name="firstName" type="text"  onChange={handleChange} value={formData.firstName} placeholder="First Name" />
+               </InputDivs>
+               <InputDivs>
+                  <Input name="lastName"  type="text" onChange={handleChange} value={formData.lastName} placeholder="Last Name"/>
+               </InputDivs>
+               <InputDivs>
+                  <Input name="email"  type="text" onChange={handleChange} value={formData.email} placeholder="Email"/>
+               </InputDivs>
+               <InputDivs>
+                  <Input name="password"  type="password" onChange={handleChange} value={formData.password} placeholder="Password" minLength={8}/>
+               </InputDivs>
+               <button type="submit" >Sign-up</button>
+            </form>
+            <p>{userMassage}</p>
+         </SignUpDiv>
+      </SignUpDivWrapper>
       
 
    );

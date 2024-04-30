@@ -20,7 +20,32 @@ const BookShelf = styled.div`
    overflow-y: auto;
    margin: 0 auto;  // Centers the BookShelf in the BookSection
 `;
+const LoginPromptWrapper = styled.div`
+width: 95%;
+display: flex;
+justify-content: center;
+align-items: center;
 
+`;
+
+const LoginPromptDiv = styled.div`
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   margin:  100px 0px 0px 0px;
+  
+   width: 100%;
+
+   p{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 550;
+    color: #BF4E30;
+   }
+`;
+
+  
+ 
 
 const MyBooks = ({ token }) => {
     const [loading, setLoading] = useState(false);
@@ -56,7 +81,15 @@ const MyBooks = ({ token }) => {
     }
 
     if (!token) {
-        return <p>Please log in to view your account.</p>;
+        return (
+
+        <LoginPromptWrapper>
+            <LoginPromptDiv>
+                <p>Please log in to view your account.</p>
+            </LoginPromptDiv>
+        </LoginPromptWrapper>
+
+        );
     }
 
     if (loading) {
