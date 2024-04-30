@@ -33,5 +33,11 @@ To run this project locally, follow these steps:
 
 3. Open any of the HTML files (index.html, about.html, portfolio.html) in your preferred web browser.
 
-#Live Demo: You can check out a live demo of this project 🔗 [here](https://loquacious-fairy-2fad56.netlify.app/)
-#Dummy Account: Email: hgranger@hogwarts.org Password: MySpells
+## Live Demo
+
+You can check out a live demo of this project 🔗 [here](https://loquacious-fairy-2fad56.netlify.app/)
+
+## Demo Account
+
+Email: hgranger@hogwarts.org
+Password: MySpells
