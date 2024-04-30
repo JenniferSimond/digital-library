@@ -39,5 +39,7 @@ You can check out a live demo of this project 🔗 [here](https://loquacious-fai
 
 ## Demo Account
 
-Email: hgranger@hogwarts.org
-Password: MySpells
+To view account details and checkout/return books, please use this demo account.
+
+- Email: hgranger@hogwarts.org
+- Password: MySpells
