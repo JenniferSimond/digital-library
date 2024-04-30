@@ -35,7 +35,7 @@ To run this project locally, follow these steps:
 
 ## Live Demo
 
-You can check out a live demo of this project 🔗 [here](https://loquacious-fairy-2fad56.netlify.app/)
+You can check out a live demo of this project 🔗 [here](https://idyllic-blini-9bf897.netlify.app)
 
 ## Demo Account
 
