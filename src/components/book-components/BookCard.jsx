@@ -39,7 +39,7 @@ const DetailsButton = styled.button`
     z-index: 0;
 `;
 
-
+//IMPORRTANT --> Figure out how to make this a reusable component so i can use here and in MyBookCard
 const BookCard = ({singleBook}) => {
     const navigate = useNavigate() //Hook USED TO UPDATE URL PROGRAMMATICALLY
 

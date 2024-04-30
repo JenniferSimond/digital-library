@@ -85,9 +85,8 @@ h1{
 }
 
 .nav-catchphrase{
-  font-size: 25x;
-  font-weight: 500;
-  font-style: italic;
+  font-size: 20px;
+  font-weight: 550;
   text-align: center;
   padding-left: 10px;
   padding-bottom: 20px;
@@ -95,7 +94,7 @@ h1{
 
 .nav-link-text{
   padding-bottom: 20px;
- 
+  margin-right: 10px;
 }
 
 

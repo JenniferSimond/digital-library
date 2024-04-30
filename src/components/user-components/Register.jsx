@@ -14,7 +14,7 @@ const SignUpDiv = styled.div`
 margin: 50px 90px;
    display: flex;
    flex-direction: column;
-
+   margin:  100px 0px 0px 0px;
    button{
       margin:  10px 0px 0px 0px;
     padding: 0px 20px;          

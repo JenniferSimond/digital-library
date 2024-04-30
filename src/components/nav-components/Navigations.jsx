@@ -11,12 +11,12 @@ list-style-type: none;
 const LI = styled.li`
   font-size: 20px;
   display: inline;
-  margin: 15px;
+  margin: 5px;
 
   a {
     font-family: "Work Sans", sans-serif;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     color: #272727; 
   }
