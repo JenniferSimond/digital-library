@@ -16,7 +16,7 @@ const BookShelf = styled.div`
    justify-content: flex-start;  // Aligns items to the left
    align-content: flex-start;
    width: 80%;  // Adjustable as per design needs
-   max-height: 570px;
+   max-height: 670px;
    overflow-y: auto;
    margin: 0 auto;  // Centers the BookShelf in the BookSection
 `;

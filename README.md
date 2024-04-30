@@ -1,9 +1,36 @@
-# Block 30 - Book Buddy
+## Legilimens Online Library
 
-## Introduction
-
-We are working with a new client who is wanting to design an online library for the public. Another Full Stack Solutions team has already built out the API, but we need your assistance in developing the front end to ensure on-time delivery to the client. When this is complete, please submit the link to the deployed application so I can share it with the client.
+Legilimens Online Library is a font-end project I created using JavaScript, React, CSS, JSX, and the Book Buddy API. The application allows users to browse, checkout, and return books.
 
 Details on the API can be found 🔗 [here](https://fsa-book-buddy-b6e748d1380d.herokuapp.com/docs/)
 
+![photo](/src/assets/Screenshot%202024-04-29%20at%208.09.10 PM.png)
 
+## Features
+
+- User Authentication: Secure login and registration functionality.
+- Browse Books\*\*: Users can browse a list of available books.
+- Book Details\*\*: Click on any book to see detailed information.
+- Manage Reservations: Users can check out books.
+- User Profile: Manage: View their username (email) and return books.
+
+## Technologies Used
+
+- React: Used for building the user interface with components.
+- JavaScript : For scripting and handling API calls.
+- CSS: For styling components.
+- JSX: Used within React components to describe UI layout.
+
+### How to Run
+
+To run this project locally, follow these steps:
+
+1. Clone this repository to your local machine using the following command:
+   `git clone git@github.com:JenniferSimond/personal-portfolio.git`
+
+2. Navigate to the project directory:
+   `cd personal-portfolio`
+
+3. Open any of the HTML files (index.html, about.html, portfolio.html) in your preferred web browser.
+
+#Live Demo: You can check out a live demo of this project [here]()
