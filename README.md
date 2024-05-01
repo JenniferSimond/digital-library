@@ -39,7 +39,7 @@ You can check out a live demo of this project 🔗 [here](https://66310930920bff
 
 ## Demo Account
 
-To view account details and checkout/return books, please use this demo account.
+To view account details and checkout/return books, please log in with the credentials listed below.
 
 - Email: hgranger@hogwarts.org
 - Password: MySpells
