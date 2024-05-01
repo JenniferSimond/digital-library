@@ -13,7 +13,7 @@ function App() {
   // TOKEN --> Passed down to children that need user authentication --> prop drilling
   // Remember --> PROPS are like Parameters 
   const [token, setToken] = useState('');
-
+//IMPORTANT --> Make Navigation one component --> add media query to handle mobile phone views --> max-width 425px
   return (
     <div className='home-div'>
       <div className='nav-wrapper'>

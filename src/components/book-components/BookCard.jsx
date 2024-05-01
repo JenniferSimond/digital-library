@@ -49,6 +49,7 @@ const BookCard = ({singleBook}) => {
         navigate(`/books/${singleBook.id}`) 
     }
     return(
+        //IMPORTANT Go back and make Book card and Button one reusable component --> The code is being used twice
         <BookCardDiv className="book-card">
             {/* //Dynamic link to update book cover based on book  */}
             <InsideCard className="inside-card" style={{ backgroundImage: `url(${singleBook.coverimage})` }}> 

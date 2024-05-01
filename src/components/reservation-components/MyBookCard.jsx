@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { deleteBookReservation } from "../../API";
 
@@ -37,20 +38,22 @@ const DetailsButton = styled.button`
 
 
 const MyBookCard = ({book, token, refresh}) => {
+    
 //SUPER IMPORTANT >----> add book deletion on button click
 
     const handleBookReturn = async () => {
       
             try {
-                const result = await deleteBookReservation(book.id, token);
+                const deletedBook = await deleteBookReservation(book.id, token);
                 refresh();
-                // Additional UI update logic here if necessary
+              
             } catch (error) {
                 console.error("Failed to return the book:", error);
             }
         };
          
    
+//IMPORTANT Go back and make Book card and Button one reusable component --> The code is being used twice
 
     return(
         <BookCardDiv >
