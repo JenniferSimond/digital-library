@@ -24,12 +24,12 @@ const BookShelf = styled.div`
 `;
 
 const SearchDiv = styled.div`
-   margin: 0px 0px 25px 170px;
+   margin: 0px 0px 15px 170px;
 `;
 
  const SearchBox = styled.input`
  padding: 10px;
-//  margin: 10px 0;
+//  margin: 10px 0px 5px 0px;
  width: 35%;
  border: 3px solid #E2B170;
  border-radius: 33px;

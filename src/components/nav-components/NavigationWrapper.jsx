@@ -14,7 +14,7 @@ const NavigationWrapper = (props) => {
             <span className='logo-span2'>- Online -</span>
             <span className='logo-span'>Library</span>
           </h1>
-          <h2 className='nav-catchphrase'>Check Out an Adventure!</h2>
+        
           <div className='nav-link-text'>
             <NavLinks />
           </div>

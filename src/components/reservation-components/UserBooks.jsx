@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getUserDetails } from "../../API";  
 import AccountBookCard from "./AccountBookCard";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const BookSection = styled.div`
    // width: 100%; 
@@ -52,6 +53,9 @@ const UserBooks = ({ token }) => {
     const [userDetails, setUserDetails] = useState(null);
     const [error, setError] = useState(null);
     const [pageRefresh, setPageRefresh] = useState(false)
+    const navigate = useNavigate();
+
+    
     useEffect(() => {
         const fetchData = async () => {
             if (!token) {
@@ -81,15 +85,8 @@ const UserBooks = ({ token }) => {
     }
 
     if (!token) {
-        return (
-
-        <LoginPromptWrapper>
-            <LoginPromptDiv>
-                <p>Please log in to view your account.</p>
-            </LoginPromptDiv>
-        </LoginPromptWrapper>
-
-        );
+       navigate('/login')
+       return null //null here (in components render) means don't render this on screen
     }
 
     if (loading) {
