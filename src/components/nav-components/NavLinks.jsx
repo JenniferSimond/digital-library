@@ -34,7 +34,7 @@ const NavLinks = () =>  {
                             <Link to='/books'>Home</Link>
                         </LI>
                         <LI>
-                            <Link to='/userbooks'>My Books</Link>
+                            <Link to='/mybooks'>My Books</Link>
                         </LI>
                         <LI>
                             <Link to='/login'>Login</Link>

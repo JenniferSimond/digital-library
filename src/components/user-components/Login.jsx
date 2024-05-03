@@ -73,7 +73,7 @@ const Login = ({setToken}) => {
                 // localStorage.setItem('loginToken', userData.token)
                 //TRY USING THIS INSTEAD OF STATE
                setToken(userData.token)
-               navigate('/account') //auto navigate to profile
+               navigate('/mybooks') //auto navigate to profile
             } else {
                 console.error('Error logging in')
             }

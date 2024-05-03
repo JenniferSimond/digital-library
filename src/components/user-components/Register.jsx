@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import { API_URL } from "../../API";
+import { Navigate } from "react-router-dom";
 
 const SignUpDivWrapper = styled.div`
 width: 95%;
@@ -82,6 +83,7 @@ const Register = ({setToken}) => {
          if (data.token) {
          
             setToken(data.token)
+            
          } else {
             console.error('No registration token received');
          }
@@ -97,7 +99,7 @@ const Register = ({setToken}) => {
          email: '',
          password: ''
       });
-     
+    
    };
 //IMPORTANT! ---> finish styling
    return (

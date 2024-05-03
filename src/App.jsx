@@ -8,6 +8,7 @@ import Login from './components/user-components/Login'
 import Register from './components/user-components/Register'
 import Account from './components/reservation-components/UserBooks'
 import UserBooks from './components/reservation-components/UserBooks'
+import AccountBookCard from './components/reservation-components/AccountBookCard'
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
             <Route path='/' element={<Books />} /> 
             <Route path='/books' element={<Books />} />
             <Route path='/books/:bookId' element={<SingleBook token={token}/>} />  
-            <Route path='/userbooks' element={<UserBooks token={token} />} />
+            <Route path='/mybooks' element={<UserBooks token={token} />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />
           </Routes>
