@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getUserDetails } from "../../API";  
-import MyBookCard from "./MyBookCard";
+import AccountBookCard from "./AccountBookCard";
 import styled from "styled-components";
 
 const BookSection = styled.div`
@@ -47,7 +47,7 @@ const LoginPromptDiv = styled.div`
   
  
 
-const MyBooks = ({ token }) => {
+const Account = ({ token }) => {
     const [loading, setLoading] = useState(false);
     const [userDetails, setUserDetails] = useState(null);
     const [error, setError] = useState(null);
@@ -110,7 +110,7 @@ const MyBooks = ({ token }) => {
                    
                         <BookShelf>
                             {userDetails.books.map(book => (
-                                <MyBookCard key={book.id} book={book} token={token} refresh={refreshHandler} />
+                                <AccountBookCard key={book.id} book={book} token={token} refresh={refreshHandler} />
                             ))}
                         </BookShelf>
                    
@@ -122,4 +122,4 @@ const MyBooks = ({ token }) => {
     );
 }
 
-export default MyBooks;
+export default Account;

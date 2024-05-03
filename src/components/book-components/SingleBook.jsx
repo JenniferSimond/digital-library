@@ -122,7 +122,7 @@ const SingleBook = ({token}) => {
         //Don't need to store or pass, the book id is used during book reservation cancellation, just needed this to get the reservation in database
         const checkOutStat = await bookCheckOutReservation(bookId, token);
         alert(`check out successful,${book.title} is now awailable in My Books`);
-        //add auto navigate back o home page --> I may have to ass some sort of delay. 
+        //add auto navigate back o home page --> I may have to add some sort of delay. 
        } catch (error) {
         console.error('Checkout failed:', error);
         alert('Checkout failed. Please try again.');
