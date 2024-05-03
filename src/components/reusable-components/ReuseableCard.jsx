@@ -22,8 +22,9 @@ const InsideCard = styled.div`
 `;
 
 const Button = styled.button`
-    margin:  21px 76px 20px 76px;
-    padding: 0px 24px;          
+    margin:  21px 70px 20px 70px;
+    padding: 0px 29px; 
+    font-weight: 560;         
     font-size: 12px;     
     background-color: #E2B170; 
     color: rgb(0, 0, 0);       

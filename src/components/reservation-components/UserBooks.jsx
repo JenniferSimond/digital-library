@@ -47,7 +47,7 @@ const LoginPromptDiv = styled.div`
   
  
 
-const Account = ({ token }) => {
+const UserBooks = ({ token }) => {
     const [loading, setLoading] = useState(false);
     const [userDetails, setUserDetails] = useState(null);
     const [error, setError] = useState(null);
@@ -122,4 +122,4 @@ const Account = ({ token }) => {
     );
 }
 
-export default Account;
+export default UserBooks;

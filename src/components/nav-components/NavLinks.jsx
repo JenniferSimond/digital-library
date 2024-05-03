@@ -22,7 +22,7 @@ const LI = styled.li`
   }
 `;
 
-const Navigation = () =>  {
+const NavLinks = () =>  {
    
     
         return (
@@ -34,7 +34,7 @@ const Navigation = () =>  {
                             <Link to='/books'>Home</Link>
                         </LI>
                         <LI>
-                            <Link to='/Account'>My Books</Link>
+                            <Link to='/userbooks'>My Books</Link>
                         </LI>
                         <LI>
                             <Link to='/login'>Login</Link>
@@ -51,4 +51,4 @@ const Navigation = () =>  {
         
 }
 
-export default Navigation
+export default NavLinks
