@@ -8,6 +8,11 @@ const CardDiv = styled.div`
     flex-shrink: 0;
     border-radius: 5px;
     background-color: #272727;
+    // box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16),
+    // 0px 3px 6px 0px rgba(0,0,0,0.23);
+
+    box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.25),
+8px 13px 10px -23px rgba(0,0,0,0.22);
 `;
 
 const InsideCard = styled.div`

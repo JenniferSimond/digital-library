@@ -14,7 +14,7 @@ const BookShelf = styled.div`
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   gap: 30px;
+   gap: 45px;
    justify-content: flex-start;  // Aligns items to the left
    align-content: flex-start;
    width: 80%;  // Adjustable as per design needs
