@@ -5,42 +5,59 @@ import { API_URL } from "../../API";
 import { Navigate } from "react-router-dom";
 
 const SignUpDivWrapper = styled.div`
-width: 95%;
+
+width: 100%;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 `;
 
 const SignUpDiv = styled.div`
-margin: 50px 90px;
+   margin: 50px 140px;
    display: flex;
    flex-direction: column;
-   margin:  100px 0px 0px 0px;
+   gap: 20px;
+   margin: 100px 0;
+   
+   h2 {
+      font-size: 30px;
+   }
+
+
    button{
-      margin:  10px 0px 0px 0px;
-    padding: 0px 20px;          
-    font-size: 12px;     
-    background-color: #E2B170; 
-    color: rgb(0, 0, 0);       
-    border: none;        
-    border-radius: 30px; 
-    cursor: pointer;     
-    text-align: center; 
-    line-height: 26px;   
-    z-index: 0;
+      margin-top: 10px;
+        margin-left: 2px;
+        padding: 2px 20px; 
+        font-weight: 600;
+        font-size: 12px;     
+        background-color:  #272727; 
+        color: #E2B170;
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+        line-height: 26px;
+        cursor: pointer;
+        box-shadow: 0 4px 11px rgba(63, 62, 61, 0.4), 0 1px 3px rgba(93, 100, 148, 0.2);
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            box-shadow: 0 8px 22px rgba(63, 62, 61, 0.5), 0 4px 6px rgba(42, 47, 61, 0.5);
+            transform: scale(1.05);
+        }
    }
 `;
 
 const InputDivs = styled.div`
-   display: flex;
-   flex-direction: column;
-  margin: 10px 0px 10px 0px;
+display: flex;
+flex-direction: column;
+margin: 0px 0px 15px 0px;
 `;
 
 const Input = styled.input`
-   max-width: 200px;
-   padding: 5px;
-   border: 1px solid #E2B170;
+  max-width: 290px;
+   padding: 10px 5px;
+   border: 2px solid #E2B170;
    border-radius: 5px;
 `;
 

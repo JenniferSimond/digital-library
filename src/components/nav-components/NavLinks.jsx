@@ -16,7 +16,7 @@ const LI = styled.li`
   a {
     font-family: "Work Sans", sans-serif;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     color: #272727; 
   }
@@ -35,9 +35,6 @@ const NavLinks = () =>  {
                         </LI>
                         <LI>
                             <Link to='/mybooks'>My Books</Link>
-                        </LI>
-                        <LI>
-                            <Link to='/login'>Login</Link>
                         </LI>
                         <LI>
                             <Link to='/register'>Sign-up</Link>

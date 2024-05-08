@@ -4,8 +4,16 @@ import AccountBookCard from "./AccountBookCard";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
+
+const MainDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
 const BookSection = styled.div`
-   // width: 100%; 
+    width: 100%; 
 `;
 
 const BookShelf = styled.div`
@@ -17,32 +25,30 @@ const BookShelf = styled.div`
    justify-content: flex-start;  // Aligns items to the left
    align-content: flex-start;
    width: 80%;  // Adjustable as per design needs
-   max-height: 670px;
+   max-height: 680px;
    overflow-y: auto;
    margin: 0 auto;  // Centers the BookShelf in the BookSection
 `;
-const LoginPromptWrapper = styled.div`
-width: 95%;
-display: flex;
-justify-content: center;
-align-items: center;
 
-`;
+const UserInfo = styled.div`
 
-const LoginPromptDiv = styled.div`
-   display: flex;
-   align-self: center;
-   justify-content: center;
-   margin:  100px 0px 0px 0px;
-  
-   width: 100%;
+    margin: 20px 0px 20px 165px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+   gap: 5px;
 
-   p{
+   p {
+    font-weight: 500;
+    color: #bf4e30;
     font-size: 15px;
-    text-align: center;
-    font-weight: 550;
-    color: #BF4E30;
    }
+
+   span {
+    
+    font-style: italic;
+   }
+   
 `;
 
   
@@ -97,12 +103,17 @@ const UserBooks = ({ token }) => {
     }
 //IMPORTANT! ---> finish styling
     return (
-        <div>
-            <h1>My Books 📚</h1>
+        <MainDiv>
+            <h2>My Books 📚</h2>
             {userDetails ? (
                 <BookSection>
-                    <p>User: {userDetails.email}</p>
-                    <h2>My Books:</h2>
+                    <UserInfo>
+                    
+                        <span>
+                            <p>User: {userDetails.email}</p>
+                        </span>
+                        <p>Resereved Books:</p>
+                    </UserInfo>
                    
                         <BookShelf>
                             {userDetails.books.map(book => (
@@ -114,7 +125,7 @@ const UserBooks = ({ token }) => {
             ) : (
                 <p>No user account found.</p>
             )}
-        </div>
+        </MainDiv>
     );
 }
 
