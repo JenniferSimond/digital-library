@@ -35,7 +35,7 @@ To run this project locally, follow these steps:
 
 ## Live Demo
 
-You can check out a live demo of this project 🔗 [here](https://6638344de4a6424e1bd2a5e5--idyllic-blini-9bf897.netlify.app/)
+You can check out a live demo of this project 🔗 [here](https://663af294d7d2d9a8849bb395--idyllic-blini-9bf897.netlify.app/)
 
 ## Demo Account
 
