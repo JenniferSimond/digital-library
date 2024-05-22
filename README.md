@@ -8,7 +8,7 @@ Details on the API can be found 🔗 [here](https://fsa-book-buddy-b6e748d1380d.
 
 ## Features
 
-- User Authentication: Secure login and registration functionality.
+- User Authentication: login and registration functionality.
 - Browse Books: Users can browse a list of available books.
 - Book Details: Click on any book to see detailed information.
 - Manage Reservations: Users can check out books.
